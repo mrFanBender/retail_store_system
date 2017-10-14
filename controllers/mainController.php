@@ -2,10 +2,14 @@
 
 namespace Application\Controllers;
 
+use Application\Models\User as UserModel;
+use Application\Controllers\User;
+use Application\Classes\UserRights;
 class mainController{
 
 	public $post = array();
 	public $get = array();
+	protected $user = false;
 	protected $data = array();
 	protected $styles = array();
 	protected $scripts = array();
@@ -26,10 +30,33 @@ class mainController{
 			$this->act = !empty($pathParts[$i+1]) ? ucfirst($pathParts[$i+1]) : 'Index';
 			$this->obj_id = (!empty($pathParts[$i+2]) && (int)$pathParts[$i+2]>0) ? (int)$pathParts[$i+2] : false;
 			//проверяем, авторизован ли пользователь
-			if(!isset($_SESSION['user_id'])&& ($this->ctrl != 'User' && ($this->act != 'Login' || $this->act != 'Register'))){
-				header('Location: /user/login');
+			if(!isset($_SESSION['user_id']) && (($this->ctrl == 'User' && ($this->act != 'Confirm' && $this->act != 'Login' && $this->act != 'Registration'&& $this->act != 'SendConfirmLetter')) ||  $this->ctrl != 'User')){
+				header('Location: /user/Login');
 			}
-			//проверяем, нужен ли основной шаблон, нужно ли вернуть данные в формате json. Задает формат ответа
+			if(isset($_SESSION['user_id'])){
+				//если есть User_id, проверяем, существует ли такой пользователь
+				$this->user = UserModel::getOne(array('id'=>$_SESSION['user_id'], 'hash' => $_SESSION['user_hash']));
+				if(!$this->user){
+					header('Location: /user/logout');
+				}
+				//если hash в сессии не совпадает с генерируемым, выходим
+				if(!isset($_SESSION['user_hash']) || $_SESSION['user_hash'] != User::generateHash()){
+					header('Location: /user/logout');
+				}
+				//если пользователь не подтвердил свой email, отправляем его на подтверждение
+				if(!$this->user->confirm && $this->act != 'Confirm'){
+					header('Location: /user/confirm');
+				}
+				// если пользователь существует и имеет подтвержденный email, но пытается войти, перенаправляем на /product
+				if($this->user->confirm && ($this->ctrl == 'User' && ($this->act == 'Confirm' || $this->act == 'Login' || $this->act == 'Registration'))){
+					header('Location: /product');
+				}
+				//подгружаем компании пользователя и выбираем основную
+				$this->user->getCompanies();
+				//var_dump($this->user);
+				UserRights::$active_company_id = $this->user->getActiveCompany()->id;
+				var_dump(UserRights::$active_company_id);
+			}
 			$this->maintemplate = true;
 			$this->json = false;
 			foreach($this->data as $k => $v){
@@ -53,8 +80,11 @@ class mainController{
 		if($this->json==='true'){
 			//если нужен ответ в формате json, главный шаблон не нужен
 			//пока что криво работает, надо преобразование в json делать нормальным
-			$data = $this->content->getData();
-			return json_encode($data, true);
+			return json_encode(array('data'=> $this->content->getData(), 
+									'statusMessages'=>$this->content->getStatusMessages(), 
+									'errors' => $this->content->getErrors(), 
+									'redirect'=>$this->content->getRedirect()),
+				 				true);
 		}
 		elseif($this->maintemplate === 'false'){
 			//если вдруг нужен шаблон контроллера без главного
@@ -65,10 +95,6 @@ class mainController{
 			$view->mainController = $this;
 			return $view->render('maintemplate');
 		}
-	}
-
-	public function redirect(){
-		
 	}
 
 	public function __set($k, $v){

@@ -32,6 +32,7 @@
 		echo $mainController->output();
 	}
 	catch(\Exception $e){
+		var_dump($e);
 		//временно, переделать
 		$log = new Log();
 		$log->write($e);

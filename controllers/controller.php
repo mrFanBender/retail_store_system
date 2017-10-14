@@ -8,12 +8,12 @@ use Application\Controllers\MainController;
 abstract class controller{
 	protected $answer;
 	protected $view;
-	protected $maincontroller;
+	protected $mainController;
 
 	public function __construct(){
 		$this->view = new View();
 		$this->answer = new Answer();
-		$this->maincontroller = mainController::getInstance();
+		$this->mainController = mainController::getInstance();
 	}
 
 	public function actionIndex(){

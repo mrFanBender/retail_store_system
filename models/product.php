@@ -28,7 +28,8 @@ public 		static $required_data = array(	'id'			=>false,
 											'large_opt_price'		=>false,
 											'medium_opt_price'		=>false,
 											'small_opt_price'		=>false,
-											'retail_price'			=>true);
+											'retail_price'			=>true,
+											'company_id'			=>false);
 private $parent = false;
 
 public function getParent(){

@@ -18,7 +18,8 @@ protected 	static $table = 'product_group';
 public 		static $required_data = array(	'id'			=>false,
 											'name'			=>true,
 											'description' 	=>false,
-											'parent_id'		=>false);
+											'parent_id'		=>false,
+											'company_id'	=>false);
 
 
 

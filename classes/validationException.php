@@ -2,14 +2,14 @@
 namespace Application\Classes;
 
 class validationException extends \Exception{
-	public $statusMessages = array();
+	public $messages = array();
 	
 	public function __construct($msg, $target='msgBox', $type='error'){
-		$this->statusMessages[] = array('message'=>$msg, 'target'=> $target, 'type'=>$type);
+		$this->messages[] = array('message'=>$msg, 'target'=> $target, 'type'=>$type);
 	}
 
-	public function getStatusMessages(){
-		return $this->statusMessages;
+	public function getMessages(){
+		return $this->messages;
 	}
 } 
 

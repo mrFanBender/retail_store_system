@@ -5,6 +5,7 @@ namespace Application\Models;
 use Application\Classes\Db;
 use Application\Classes\E404Exception;
 use Application\Classes\validationException;
+use Application\Controllers\MainController;
 
 abstract class AbstractModel
 {
@@ -42,6 +43,9 @@ abstract class AbstractModel
 	}
 
 	public static function get($params = array(), $limit=0, $offset=0, $index=false){
+		if(isset(static::$required_data['company_id']) && !isset($params['company_id'])){
+			throw new \Exception('Нет выбранной компании');
+		}
 		$db = new Db();
 		$class=get_called_class();
 		$db->setClassName($class);
@@ -101,11 +105,13 @@ abstract class AbstractModel
 	public function setPostData(){
 		//функция не выполняет задачи валидации
 		foreach(static::$required_data as $required_data_key => $required_data_value){
-				if(isset($_POST[$required_data_key]))
+				if(isset($_POST[$required_data_key])){
 					$this->$required_data_key = $_POST[$required_data_key];
 				}
+			}
 	}
-	/*public static function findAll(){
+
+		/*public static function findAll(){
 		$class=get_called_class();
 		$sql = 'SELECT * FROM '.static::$table;
 		$db = new DB();
@@ -211,10 +217,6 @@ abstract class AbstractModel
 			return true;
 		}
 	}*/
-
-
-
-
 }
 
 ?>

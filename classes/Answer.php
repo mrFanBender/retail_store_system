@@ -5,16 +5,20 @@ class Answer{
 	private $html='';
 	private $data=array();
 	private $statusMessages = array();
+	private $errors = array();
+	private $_route = false;
 
 	public function __construct($html='', $data = array()){
 		$this->html = $html;
-		$this->data = $data;
 		if($data instanceof \Application\Classes\ValidationException){
-			foreach($data->getStatusMessages() as $statusMessage){
-				$this->statusMessage( $statusMessage['message'], $statusMessage['target'], $statusMessage['type']);
+			foreach($data->getMessages() as $error){
+				$this->addError($error['message'], $error['target'], $error['type']);
 			}
-		}elseif($data instanceof \Application\Classes\Exception){
-			$this->statusMessage($e->getMessage(),'msgBox', 'error');
+		}elseif($data instanceof \Exception){
+			$this->addError($data->getMessage(),'msgBox', 'error');
+			$this->data['error'] = $data;
+		}else{
+			$this->data = $data;
 		}
 	}
 
@@ -34,24 +38,44 @@ class Answer{
 		return $this->html;
 	}
 	public function setHtml($html){
-		
-		return $this->html = $html;
+		$this->html = $html;
+		return $this;
 	}
 
 	public function getData(){
-		$result['data'] = $this->data;
-		$result['statusMessages'] = $this->statusMessages;
-		return $result;
+		return $this->data;
 	}
-	public function statusMessage($msg, $target='msgBox', $msgtype='success'){
+
+	public function addStatusMessage($msg, $target='msgBox', $msgtype='success'){
 		//задаем сообщение и его тип. Возможные типы: success, warning, error
 		$this->statusMessages[] = array(	'type' 		=> 	$msgtype,
 											'message'	=>	$msg,
 											'target'	=>	$target);
-	}
-	public function redirect($rout){
-		$this->_route = $route;
 		return $this;
+	}
+
+	public function getStatusMessages(){
+		return $this->statusMessages;
+	}
+
+	public function addError($msg, $target='msgBox', $msgtype='success'){
+		//задаем сообщение и его тип. Возможные типы: success, warning, error
+		$this->errors[] = array(	'type' 		=> 	$msgtype,
+											'message'	=>	$msg,
+											'target'	=>	$target);
+	}
+
+	public function getErrors(){
+		return $this->errors;
+	}
+
+	public function addRedirect($rout){
+		$this->redirect = $rout;
+		return $this;
+	}
+
+	public function getRedirect(){
+		return $this->redirect;
 	}
 
 }

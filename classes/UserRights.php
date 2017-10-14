@@ -26,7 +26,7 @@ class UserRights{
 	//новая версия
 	const USER_RIGHTS = array(	'sail_point'		=>	array(	'general'	=>	array(	'create'	=>	false, 
 																						'delete'	=>	false), 
-																'object'	=>	array(	'access'	=>	false
+																'object'	=>	array(	'access'	=>	false,
 																						'visible'	=>	false)),
 								'warehouse'			=>	array(	'general'	=>	array(	'create'	=>	false, 			//имеет ли право пользователь создавать склады
 																						'delete'	=>	false), 		//имеет ли право пользователь редактировать и удалять склады
@@ -64,6 +64,7 @@ class UserRights{
 																'purchase_price'	=>	array(	'visible'	=>	false, 
 																								'access'	=>	false))
 							);
+	public static $active_company_id = 0;
 	public static function getRights($params = array()){
 		$userrights = URModel::get($params);
 		

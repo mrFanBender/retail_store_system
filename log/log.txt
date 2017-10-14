@@ -83,3 +83,96 @@
 08:10:2017 22:47 [Место]:C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\controllers\user.php [Сообщение об ошибке]
 08:10:2017 22:48 [Место]:C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\controllers\user.php [Сообщение об ошибке]
 08:10:2017 22:49 [Место]:C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,sdfsdf,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 13:35 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('Рустам', 'rustam', '123', 'yWSmi9bkOmn5p72JccBh'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:36 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('Рустам', 'rustam', '123', 'TMeDvNRJlToSsBOIwkSl'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:36 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'kP6Hl6g2hlvr3XqSDBJ1'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:37 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'jqdIImFQx0J3NtDVpqsb'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:38 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', '6iMLiEt3r5QAY3ZzGrWA'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:41 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'tGKmnDuFDPoGj48KjS64'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:41 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'LotzuKaFhXCeHJAMLi9b'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:42 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'G2Gvg29hB19414wONsCF'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:43 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'BCXt23Dt9KhNYqHrQ27g'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:43 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'HMj6C9fLZRtazAyH6SRF'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:43 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'Z0sUDj9yVRq1lAnYvVrW'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:44 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'KQIoREBiBSvNJoPYHwjY'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:44 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'R0SMNbrh4h0UoTHwXN10'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:44 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'CtbYInvD18EIGCbwAkc9'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:46 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'ZwTehnuvQ1leQvvwPUCF'), ERROR: Field 'job' doesn't have a default value
+09:10:2017 13:47 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', '69YrbPc4ZN6KUTBCWmmN'), ERROR: Field 'description' doesn't have a default value
+09:10:2017 13:49 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user (name, login, pass, hash) VALUES ('rustam', 'rustam', '123', 'naymoGb2Cl57YboQby9L'), ERROR: Field 'description' doesn't have a default value
+09:10:2017 13:57 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 13:58 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 13:59 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 14:01 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 14:03 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 14:04 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 14:05 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:07 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,123,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 14:07 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:14 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:16 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:16 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:43 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:44 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:47 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:48 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:55 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 14:56 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:02 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:02 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:02 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam3,rustam,123,1234,true)), ERROR: Unknown column 'rustam3' in 'where clause'
+09:10:2017 15:03 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:04 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:04 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:04 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:05 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:06 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:06 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE login  IN (rustam,rustam,123,1234,true)), ERROR: Unknown column 'rustam' in 'where clause'
+09:10:2017 15:07 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:07 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:16 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:19 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:19 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:30 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:33 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:37 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+09:10:2017 15:46 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 14:55 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 14:57 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:00 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:09 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:10 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:10 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:12 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:13 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:13 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:13 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:15 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:15 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:16 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:18 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:22 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:22 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:23 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:24 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:29 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 15:31 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+10:10:2017 16:14 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 13:57 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 13:57 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:35 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:43 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:44 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:45 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:48 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:50 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:51 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:52 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:53 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+11:10:2017 15:55 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+13:10:2017 16:19 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+13:10:2017 16:20 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+13:10:2017 16:20 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+13:10:2017 16:39 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+13:10:2017 16:41 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+13:10:2017 16:42 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
