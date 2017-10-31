@@ -9,7 +9,7 @@ class mainController{
 
 	public $post = array();
 	public $get = array();
-	protected $user = false;
+	//protected $user = false;
 	protected $data = array();
 	protected $styles = array();
 	protected $scripts = array();
@@ -31,21 +31,21 @@ class mainController{
 			$this->obj_id = (!empty($pathParts[$i+2]) && (int)$pathParts[$i+2]>0) ? (int)$pathParts[$i+2] : false;
 			//проверяем, авторизован ли пользователь
 			if(!isset($_SESSION['user_id']) && (($this->ctrl == 'User' && ($this->act != 'Confirm' && $this->act != 'Login' && $this->act != 'Registration'&& $this->act != 'SendConfirmLetter')) ||  $this->ctrl != 'User')){
-				header('Location: /user/Login');
+				header('Location: /User/Login');
 			}
 			if(isset($_SESSION['user_id'])){
 				//если есть User_id, проверяем, существует ли такой пользователь
-				$this->user = UserModel::getOne(array('id'=>$_SESSION['user_id'], 'hash' => $_SESSION['user_hash']));
+				$this->user = UserModel::getOne(array('id'=>$_SESSION['user_id']));
 				if(!$this->user){
-					header('Location: /user/logout');
+					header('Location: /User/logout');
 				}
 				//если hash в сессии не совпадает с генерируемым, выходим
 				if(!isset($_SESSION['user_hash']) || $_SESSION['user_hash'] != User::generateHash()){
-					header('Location: /user/logout');
+					header('Location: /User/logout');
 				}
 				//если пользователь не подтвердил свой email, отправляем его на подтверждение
 				if(!$this->user->confirm && $this->act != 'Confirm'){
-					header('Location: /user/confirm');
+					header('Location: /User/confirm');
 				}
 				// если пользователь существует и имеет подтвержденный email, но пытается войти, перенаправляем на /product
 				if($this->user->confirm && ($this->ctrl == 'User' && ($this->act == 'Confirm' || $this->act == 'Login' || $this->act == 'Registration'))){
@@ -53,9 +53,11 @@ class mainController{
 				}
 				//подгружаем компании пользователя и выбираем основную
 				$this->user->getCompanies();
-				//var_dump($this->user);
 				UserRights::$active_company_id = $this->user->getActiveCompany()->id;
-				var_dump(UserRights::$active_company_id);
+				//подгружаем права пользователя
+				$this->user->getRights();
+				//var_dump(UserRights::checkRights($this->user, 'warehouse', 0));
+				//var_dump($this->user);
 			}
 			$this->maintemplate = true;
 			$this->json = false;

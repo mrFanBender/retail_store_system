@@ -119,7 +119,7 @@ Class DBinside
 
     $i = 0;
     $fetch = "fetch_{$type}";
-    while ($row = $this->result->{$fetch}($type == 'object' ? $className : '')) {
+    while ($row = ($type == 'object' ? $this->result->{$fetch}($className) : $this->result->{$fetch}())) {
       $i++;
       if (is_array($index) && !in_array($i, $index)) {
         continue;
@@ -131,8 +131,8 @@ Class DBinside
       if ($one) {
         return (object)$row;
       }
-
-      array_push($result, (($type == 'assoc') ? (object)$row : $row)); //немного подкорректируем метод, чтобы он воспринимал классы
+      array_push($result, $row);
+      //array_push($result, (($type == 'assoc') ? (object)$row : $row)); //немного подкорректируем метод, чтобы он воспринимал классы
     }
 
     return $result;

@@ -1,15 +1,24 @@
-
 $(document).ready(function(){
+	//функция для работы табов
+	$(".nav-tabs > .nav-item > a.nav-link").click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+	});
+	$(".nav-pills > a.nav-item.nav-link").each(function(){
+		if($(location).attr('href').match($(this).attr('href')) ||
+			$(location).attr('pathname').match($(this).attr('href'))){
+			target = $(this).attr('target_tab');
+			$(target).tab('show');
+			$(this).addClass('active');
+		}
+	});
+
 	//временная функция обработки ajax
 	$('[name=button]').bind('click', function(){
 		var params = $(this).parent('form').serialize();
 		var url = $(this).parent('form').attr('action');
 		ajax_form(params, url);
 	});
-
-	function call1(){
-		alert('вызов прошел');
-	};
 
 	function ajax_form(params, url){
 		params = params+'&json=true';

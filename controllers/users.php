@@ -4,14 +4,12 @@ namespace Application\Controllers;
 use Application\Models\User as UserModel;
 use Application\Models\Warehouse as WarehouseModel;
 use Application\Models\ProductGroup as ProductGroupModel;
-use Application\Models\userRewards as userRewardsModel;
-use Application\Models\UserRights as URModel;
 use Application\Classes\Answer;
 use Application\Classes\ValidationException;
 use Application\Classes\UserRights;
 use Application\Controllers\View;
 
-class User extends \Application\Controllers\controller{
+class Users extends \Application\Controllers\controller{
 	public function actionIndex(){
 		return $this->actionGetAll();
 	}
@@ -168,72 +166,42 @@ class User extends \Application\Controllers\controller{
 		}
 		if(isset($_POST['user_rights'])){
 			//сохраняем права пользователя
-			//удаляем те, что есть в базе;
-			UserRights::delete($user->id, UserRights::$active_company_id);
 			$user_rights_array = $_POST['user_rights'];
-			//записываем новые
-			foreach($user_rights_array as $user_rights_object_type => $user_rights_object_type_v){
-				foreach($user_rights_object_type_v as $user_rights_object_id => $user_rights_object_id_v){
-					foreach($user_rights_object_id_v as $user_rights_object_right_type => $user_rights_object_right_type_v){
-						$user_right = new URModel();
-						$user_right->user_id = $user->id;
-						$user_right->object_id=$user_rights_object_id;
-						$user_right->object_type=$user_rights_object_type; 
-						$user_right->right_code=$user_rights_object_right_type; 
-						$user_right->value = 1;
-						$user_right->company_id	=	UserRights::$active_company_id;
-						//сохраняем
-						$user_right->save();
+			foreach($user_rights_array as $user_rights_object_type){
+				foreach($user_rights_object_type as $user_rights_object_id){
+					foreach($user_rights_object_id as $user_rights_object_right_type){
+						var_dump('типа сохранили');
 					}
-				}
-			}
-			//сохраняем вознаграждения
-			//удаляем те, что есть в базе;
-			UserRights::deleteRewards($user->id, UserRights::$active_company_id);
-			$user_rewards_array = $_POST['user_rewards'];
-			foreach($user_rewards_array as $product_group_id => $group_prices){
-				foreach($group_prices as $price_type => $reward){
-					$user_reward = new userRewardsModel();
-					$user_reward->user_id = $user->id;
-					$user_reward->product_group_id = $product_group_id;
-					$user_reward->price_type = $price_type;
-					$user_reward->value = $reward;
-					$user_reward->company_id = UserRights::$active_company_id;
-					//сохраняем
-					$user_reward->save();
 				}
 			}
 		}
 		$rights = $user->getRights();
 		$user_rights_array = array();
 		//подгружаем точки продаж
-		$sell_points = array();
-		$user_rights_array['sell_point'][] = UserRights::checkRights($user, 'sell_point', 0);
+
 		//подгружаем склады
 		$warehouses = WarehouseModel::get();
 		$user_rights_array['warehouse'][] = UserRights::checkRights($user, 'warehouse', 0);
 		//var_dump($user_rights_array['warehouse']);
 		foreach($warehouses as $warehouse){
-			$user_rights_array['warehouse'][$warehouse->id] = UserRights::checkRights($user, 'warehouse', $warehouse->id);
+			$user_rights_array['warehouse'][] = UserRights::checkRights($user, 'warehouse', $warehouse->id);
 		}
 		//подгружаем права на поставщиков
-		$suppliers = array();
-		$user_rights_array['supplier'][] = UserRights::checkRights($user, 'sell_point', 0);
+
 		//подгружаем права на покупателей
-		$buyers = array();
-		$user_rights_array['buyer'][] = UserRights::checkRights($user, 'sell_point', 0);
+
 		//подгружаем права на товары
 		$user_rights_array['product'][] = UserRights::checkRights($user, 'product', 0);
 		//подгружаем права на товарные группы
 		$user_rights_array['product_group'][] = UserRights::checkRights($user, 'product_group', 0);
 		$product_groups = ProductGroupModel::get();
 		foreach($product_groups as $product_group){
-			$user_rights_array['product_group'][$product_group->id] = UserRights::checkRights($user, 'product_group', $product_group->id);
+			$user_rights_array['product_group'][] = UserRights::checkRights($user, 'product_group', $product_group->id);
 		}
 		//подгружаем права на продажи
 		$user_rights_array['sell'][] = UserRights::checkRights($user, 'sell', 0);
 		//подгружаем права на управление товарным запасом
-		$user_rights_array['product_managment'][] = UserRights::checkRights($user, 'product_managment', 0);
+		$user_rights_array['product_managment'][] = UserRights::checkRights($user, 'sell', 0);
 		//подгружаем права на управление пользователями
 		$user_rights_array['user'][] = UserRights::checkRights($user, 'user', 0);
 		//подгружаем права на редактирование информации о компании
@@ -243,24 +211,10 @@ class User extends \Application\Controllers\controller{
 		$user_rights_array['medium_opt_price'][] = UserRights::checkRights($user, 'medium_opt_price', 0);
 		$user_rights_array['large_opt_price'][] = UserRights::checkRights($user, 'large_opt_price', 0);
 		$user_rights_array['purchase_price'][] = UserRights::checkRights($user, 'purchase_price', 0);
-		//подгружаем размер вознаграждений
-		$user_rewards = array();
-		foreach($product_groups as $product_group){
-			$user_rewards[$product_group->id]['purchase_price'] = UserRights::getReward($user->id, $product_group->id, 'purchase_price');
-			$user_rewards[$product_group->id]['small_opt_price'] = UserRights::getReward($user->id, $product_group->id, 'small_opt_price');
-			$user_rewards[$product_group->id]['medium_opt_price'] = UserRights::getReward($user->id, $product_group->id, 'medium_opt_price');
-			$user_rewards[$product_group->id]['large_opt_price'] = UserRights::getReward($user->id, $product_group->id, 'large_opt_price');
-		}
 		//var_dump($user_rights_array);
 		$this->view->user = $user;
 		$this->view->user_rights = $user_rights_array;
-		$this->view->warehouses = $warehouses;
-		$this->view->sell_points = $sell_points;
-		$this->view->suppliers = $suppliers;
-		$this->view->buyers = $buyers;
-		$this->view->product_groups = $product_groups;
-		$this->view->user_rewards = $user_rewards;
-		//$this->view->sell_points = $sell_points;
+
 		return $this->answer->setHtml($this->view->render('userrights'));
 	}
 

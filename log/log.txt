@@ -176,3 +176,41 @@
 13:10:2017 16:39 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
 13:10:2017 16:41 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
 13:10:2017 16:42 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 17:49 [Место]:C:\Program Files (x86)\EasyPHP-DevServer-14.1VC11\data\localweb\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 18:46 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:46 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:46 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:57 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:57 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:58 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:59 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 00:15 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 00:15 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 00:29 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 00:29 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+14:10:2017 21:30 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 07:20 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 10:37 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 11:24 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 11:26 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 11:27 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 11:32 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]Нет выбранной компании
+15:10:2017 12:25 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO product (name, description, parent_id, image, purchase_price, large_opt_price, medium_opt_price, small_opt_price, retail_price, id, active_company_id) VALUES ('Adalya', 'Табак для кальяна', '9', '', '100', '100', '100', '100', '100', '0', '1'), ERROR: Unknown column 'active_company_id' in 'field list'
+15:10:2017 12:32 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]
+15:10:2017 20:41 [Место]:C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\models\abstractModel.php [Сообщение об ошибке]
+16:10:2017 05:37 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+16:10:2017 06:29 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+16:10:2017 10:35 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+16:10:2017 14:34 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\controllers\user.php [Сообщение об ошибке]
+17:10:2017 06:03 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+20:10:2017 12:31 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+23:10:2017 11:19 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+25:10:2017 07:37 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+25:10:2017 08:34 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+26:10:2017 07:10 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+26:10:2017 15:21 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user_rights (data, company_id) VALUES ('', '1'), ERROR: Unknown column 'data' in 'field list'
+26:10:2017 15:24 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: INSERT INTO user_rights (user_id, object_id, object_type, right_code, value, company_id) VALUES ('30', '0', 'warehouse', 'create', 'on', '1'), ERROR: Incorrect integer value: 'on' for column 'value' at row 1
+27:10:2017 12:36 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+30:10:2017 10:56 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]
+30:10:2017 11:05 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\classes\DbInside.php [Сообщение об ошибке]DB error: QUERY: (SELECT * FROM user WHERE id  IN ()), ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '))' at line 1
+30:10:2017 11:10 [Место]:D:\distr\EasyPHP-Devserver-16.1\eds-www\models\abstractModel.php [Сообщение об ошибке]

@@ -4,7 +4,7 @@
 	<title>Пользователь</title>
 </head>
 <body>
-	<form name="user" action="/user/save<?php echo isset($user->id) ? '/'.$user->id : ''  ?>" method="POST">
+	<form name="user" action="/users/save<?php echo isset($user->id) ? '/'.$user->id : ''  ?>" method="POST">
 		<h1><?php echo isset($user->id) ? 'Редактирование товара' : 'Создание товара'  ?></h1>
 		<label>ФИО</label>
 		<input type="text" name="name" value="<?php echo $user->name; ?>"/><br/>

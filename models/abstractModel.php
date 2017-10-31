@@ -5,6 +5,7 @@ namespace Application\Models;
 use Application\Classes\Db;
 use Application\Classes\E404Exception;
 use Application\Classes\validationException;
+use Application\Classes\UserRights;
 use Application\Controllers\MainController;
 
 abstract class AbstractModel
@@ -43,9 +44,9 @@ abstract class AbstractModel
 	}
 
 	public static function get($params = array(), $limit=0, $offset=0, $index=false){
-		if(isset(static::$required_data['company_id']) && !isset($params['company_id'])){
-			throw new \Exception('Нет выбранной компании');
-		}
+		//проверяем, есть ли активная компания. Если id компании нужен модели, добавляем к параметрам
+		$add_params = static::checkActiveCompany($params);
+		$params = !empty($add_params) ? $add_params : $params;
 		$db = new Db();
 		$class=get_called_class();
 		$db->setClassName($class);
@@ -85,6 +86,10 @@ abstract class AbstractModel
 	}
 
 	public function save(){
+		//проверяем, есть ли активная компания. Если id компании нужен модели, добавляем к параметрам
+		if(static::checkActiveCompany()){
+			$this->company_id = UserRights::$active_company_id;
+		}
 		if(isset($this->id) && $this->id>0){
 			return $this->update();
 		}else{
@@ -109,6 +114,19 @@ abstract class AbstractModel
 					$this->$required_data_key = $_POST[$required_data_key];
 				}
 			}
+	}
+
+	protected static function checkActiveCompany($params=array()){
+		if(isset(static::$required_data['company_id'])){
+			if(UserRights::$active_company_id==0){
+				throw new validationException('Нет выбранной компании');
+			}
+			if(!isset($params['company_id'])){
+				$params['company_id'] = UserRights::$active_company_id;
+			}
+			return $params;
+		}
+		return false;
 	}
 
 		/*public static function findAll(){

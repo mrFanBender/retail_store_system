@@ -23,7 +23,7 @@
 				<td><?php echo $user->name; ?></td>
 				<td><?php echo $user->role; ?></td>
 				<td><?php echo $user->description; ?></td>
-				<td><a href="/user/save/<?= $user->id ?>">Изменить</a></td>
+				<td><a href="/user/saveRights/<?= $user->id ?>">Изменить</a></td>
 				<td><a href="/user/delete/<?= $user->id ?>">Удалить</a></td>
 			</tr>
 		<?php endforeach; ?>

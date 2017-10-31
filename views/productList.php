@@ -4,20 +4,22 @@
 	<title>Список Складов</title>
 </head>
 <body>
-	<a href='/product/save'>Создать товар</a><br/>
-	<table>
-		<trh>
-			<tdh>#</tdh>
-			<tdh>Наименование</tdh>
-			<tdh>Описание</tdh>
-			<tdh>Группа товаров</tdh>
-			<tdh>Изображение</tdh>
-			<tdh>Закупочная цена</tdh>
-			<tdh>Крупный опт</tdh>
-			<tdh>Средний опт</tdh>
-			<tdh>Мелкий опт</tdh>
-			<tdh>Розница</tdh>
-		</trh>
+	<a class="btn button" href='/product/save'>Создать товар</a><br/>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Наименование</th>
+				<th scope="col">Описание</th>
+				<th scope="col">Группа товаров</th>
+				<th scope="col">Изображение</th>
+				<th scope="col">Закупочная цена</th>
+				<th scope="col">Крупный опт</th>
+				<th scope="col">Средний опт</th>
+				<th scope="col">Мелкий опт</th>
+				<th scope="col">Розница</th>
+			</tr>
+		</thead>
 		<?php if(empty($products)): ?>
 			<tr><p>У вас нет товаров</p></tr>
 		<?php endif; ?>
